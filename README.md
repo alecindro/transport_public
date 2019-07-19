@@ -4,9 +4,11 @@
 
 mvn package docker:build
 
+docker build -t transport_public #{DockerFile folder}
+
 # Run Docker Image
 
-docker run -p 8080:8080 -t transport_public/transport_public
+docker run -p 8080:8080 -t transport_public --name tranposrt_public
 
 # Rest Api
 
